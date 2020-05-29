@@ -1,0 +1,160 @@
+-
+    const items = [
+        {
+            title: "Smart Balance Premium",
+            img: "img/gyro1.jpg",
+            status: "В наличии",
+            price: "От 9 900 ₽",
+            rating: "3.8",
+            category: "Гироскутер",
+            manufacturer: "Smart Balance"
+        }, {
+            title: "Smart Balance Galaxy",
+            img: "img/gyro2.jpg",
+            status: "В наличии",
+            price: "От 12 900 ₽",
+            rating: "4.4",
+            category: "Гироскутер",
+            manufacturer: "Smart Balance"
+        }, {
+            title: "Wellness Bad Dual 1000w",
+            img: "img/velo1.jpg",
+            status: "РАСПРОДАЖА",
+            hot: true,
+            price: "От 107 990 ₽",
+            rating: "4.8",
+            category: "Электровелосипед",
+            manufacturer: "Wellness"
+        }, {
+            title: "Elbike Pobeda",
+            img: "img/velo2.jpg",
+            status: "В наличии",
+            price: "34 990 ₽",
+            rating: "3.8",
+            category: "Электровелосипед",
+            manufacturer: "Elbike"
+        }, {
+            title: "20 Double E-motions",
+            img: "img/velo3.jpg",
+            status: "В наличии",
+            price: "От 134 990 ₽",
+            rating: "2.8",
+            category: "Электровелосипед",
+            manufacturer: "E-motions"
+        }, {
+            title: "i-Wheel 132",
+            img: "img/weel1.jpg",
+            status: "Нет в наличии",
+            price: "От 25 990 ₽",
+            rating: "3.6",
+            category: "Моноколесо",
+            manufacturer: "i-Wheel"
+        }, {
+            title: "NineBot One Z10",
+            img: "img/weel2.jpg",
+            status: "Нет в наличии",
+            price: "99 990 ₽",
+            rating: "5.0",
+            category: "Моноколесо",
+            manufacturer: "Ninebot"
+        }, {
+            title: "Ninebot Mini Robot 36v белый",
+            img: "img/segway1.jpg",
+            status: "РАСПРОДАЖА",
+            hot: true,
+            price: "13 490 ₽",
+            rating: "4.6",
+            category: "Сигвей",
+            manufacturer: "Ninebot"
+        }, {
+            title: "Smart Balance A8 Космос",
+            img: "img/segway2.jpg",
+            status: "В наличии",
+            price: "11 990 ₽",
+            rating: "4.5",
+            category: "Сигвей",
+            manufacturer: "Smart Balance"
+        }, {
+            title: "Smart Balance A8+ космос (галактика)",
+            img: "img/segway3.jpg",
+            status: "В наличии",
+            price: "От 12 990 ₽",
+            rating: "4.4",
+            category: "Сигвей",
+            manufacturer: "Smart Balance"
+        }, {
+            title: "El-Sport Mini Robot / пламя",
+            img: "img/segway4.jpg",
+            status: "РАСПРОДАЖА",
+            hot: true,
+            price: "32 490 ₽",
+            rating: "4.3",
+            category: "Сигвей",
+            manufacturer: "El-Sport"
+        }, {
+            title: "Ninebot Mini Robot 36v",
+            img: "img/segway5.jpg",
+            status: "В наличии",
+            price: "23 320 ₽",
+            rating: "4.2",
+            category: "Сигвей",
+            manufacturer: "Ninebot"
+        }
+    ]
+            .sort(() => Math.random() - 0.5);
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" href="img/scooter1.svg" type="image/x-icon")
+        title My-Giro - всё о гироскутерах
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap", rel="stylesheet")
+    body
+        .container
+            header.header
+                img.logo(src="img/scooter2.svg" alt="logo")
+                a(href="#").phone +7 800 555 35 35
+        main.main
+            .container
+                section.promo
+                    h1.promo-title Онлайн-магазин гироскутеров
+                    p.promo-text Топовые устройства по лучшим ценам с гарантией и доставкой
+                section.restaurants
+                    .section-heading
+                        h2.section-title Ассортимент
+                        input.input.input-search(type="text" placeholder="Поиск")
+                    .cards
+                        each item in items
+                            .card(class = item.hot && "hot-card")
+                                img.card-image(src=item.img alt="image")
+                                .card-text
+                                    .card-heading
+                                        h3.card-title=item.title
+                                        span.card-tag.tag=item.status
+                                    .card-info
+                                        .rating
+                                            img.rating-star(src="img/rating.svg" alt="rating")
+                                            =item.rating
+                                        .price=item.price
+                                        .category=item.category
+        a(href="#")#scrolTop
+        footer.footer
+            .container
+                .footer-block
+                    img.logo.footer-logo(src="img/scooter2.svg", alt="")
+                    nav.footer-nav
+                        a.footer-link(href="https://github.com/C0smoCat") О нас
+                        a.footer-link(href="#") Партнёрам
+                        a.footer-link(href="#") Пресс-центр
+                        a.footer-link(href="#") Контакты
+                    .social-links
+                        a.social-link(href="#")
+                            img(src="img/instagram.svg" alt="instagram")
+                        a.social-link(href="#")
+                            img(src="img/fb.svg" alt="facebook")
+                        a.social-link(href="#")
+                            img(src="img/vk.svg" alt="vk")
+        style
+            include css/style.css

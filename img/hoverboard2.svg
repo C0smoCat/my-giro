@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0px" y="0px"
+     viewBox="0 0 152 58" style="enable-background:new 0 0 152 58;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:#FFFFFF;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st2{fill:#FFFFFF;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st3{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	</style>
+    <path class="st0" d="M107.95,40.07h-24c-2.21,0-4-1.79-4-4v-6h28"></path>
+    <g>
+        <path class="st1" d="M122.95,54.07c-8.28,0-15-11.19-15-25s6.72-25,15-25h1h8v50h-8H122.95z"></path>
+        <ellipse class="st2" cx="132.95" cy="29.07" rx="15" ry="25"></ellipse>
+        <line class="st1" x1="111.95" y1="44.07" x2="119.95" y2="44.07"></line>
+        <ellipse class="st3" cx="132.95" cy="29.07" rx="7" ry="15"></ellipse>
+    </g>
+    <rect x="67.95" y="30.07" class="st3" width="12" height="6"></rect>
+    <g>
+        <path class="st1" d="M18.95,54.07c-8.28,0-15-11.19-15-25s6.72-25,15-25h1h8v50h-8H18.95z"></path>
+        <ellipse class="st2" cx="28.95" cy="29.07" rx="15" ry="25"></ellipse>
+        <line class="st1" x1="7.95" y1="44.07" x2="15.95" y2="44.07"></line>
+    </g>
+    <path class="st0" d="M27.95,40.07h36c2.21,0,4-1.79,4-4v-6h-40V40.07z"></path>
+</svg> 
