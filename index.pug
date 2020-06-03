@@ -58,7 +58,7 @@
             category: "Моноколесо",
             manufacturer: "Ninebot"
         }, {
-            title: "Ninebot Mini Robot 36v белый",
+            title: "Ninebot Mini Robot 36v",
             img: "img/segway1.jpg",
             status: "РАСПРОДАЖА",
             hot: true,
@@ -67,7 +67,7 @@
             category: "Сигвей",
             manufacturer: "Ninebot"
         }, {
-            title: "Smart Balance A8 Космос",
+            title: "Smart Balance A8",
             img: "img/segway2.jpg",
             status: "В наличии",
             price: "11 990 ₽",
@@ -75,7 +75,7 @@
             category: "Сигвей",
             manufacturer: "Smart Balance"
         }, {
-            title: "Smart Balance A8+ космос (галактика)",
+            title: "Smart Balance A8+",
             img: "img/segway3.jpg",
             status: "В наличии",
             price: "От 12 990 ₽",
@@ -83,7 +83,7 @@
             category: "Сигвей",
             manufacturer: "Smart Balance"
         }, {
-            title: "El-Sport Mini Robot / пламя",
+            title: "El-Sport Mini Robot",
             img: "img/segway4.jpg",
             status: "РАСПРОДАЖА",
             hot: true,
@@ -102,7 +102,7 @@
         }
     ]
             .sort(() => Math.random() - 0.5);
-
+    let selectedSlide = Math.ceil(Math.random() * 5)
 doctype html
 html(lang="ru")
     head
@@ -118,10 +118,43 @@ html(lang="ru")
                 a(href="#").phone +7 800 555 35 35
         main.main
             .container
-                section.promo
-                    h1.promo-title Онлайн-магазин гироскутеров
-                    p.promo-text Топовые устройства по лучшим ценам с гарантией и доставкой
-                section.restaurants
+                .slider-wrapper
+                    input#slide1(type="radio" name="point" checked=selectedSlide === 1)
+                    input#slide2(type="radio" name="point" checked=selectedSlide === 2)
+                    input#slide3(type="radio" name="point" checked=selectedSlide === 3)
+                    input#slide4(type="radio" name="point" checked=selectedSlide === 4)
+                    input#slide5(type="radio" name="point" checked=selectedSlide === 5)
+                    .slider
+                        .slides.slide1.promo
+                            h1.promo-title Онлайн-магазин гироскутеров
+                            p.promo-text Топовые устройства по лучшим ценам с гарантией и доставкой
+                        .slides.slide2.promo
+                            h1.promo-title Официальный дилер производителя
+                            p.promo-text Собственный сервисный центр, <br/>только оригинальный запчасти
+                        .slides.slide3.promo
+                            h1.promo-title Скидки и подарки
+                            p.promo-text
+                                strong Скидка 15%
+                                |
+                                | 10 дней до и после дня рождения
+                                br
+                                br
+                                strong Вейп в подарок
+                                |
+                                | всем пенсионерам
+                        .slides.slide4.promo
+                            h1.promo-title Гарантия лучшей цены
+                            p.promo-text Найдете дешевле - вернем разницу баллами
+                        .slides.slide5.promo
+                            h1.promo-title Спиннер в подарок
+                            p.promo-text При единовременной покупке от 123 456 ₽
+                    .controls
+                        label(for="slide1")
+                        label(for="slide2")
+                        label(for="slide3")
+                        label(for="slide4")
+                        label(for="slide5")
+                section.items
                     .section-heading
                         h2.section-title Ассортимент
                         input.input.input-search(type="text" placeholder="Поиск")
