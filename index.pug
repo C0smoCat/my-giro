@@ -102,7 +102,25 @@
         }
     ]
             .sort(() => Math.random() - 0.5);
-    let selectedSlide = Math.ceil(Math.random() * 5)
+    const brands = [
+        "url(img/brands.png) 0px 0px",
+        "url(img/brands.png) 170px 0px",
+        "url(img/brands.png) 340px 0px",
+        "url(img/brands.png) 510px 0px",
+        "url(img/brands.png) 680px 0px",
+        "url(img/brands.png) 0px 70px",
+        "url(img/brands.png) 170px 70px",
+        "url(img/brands.png) 340px 70px",
+        "url(img/brands.png) 510px 70px",
+        "url(img/brands.png) 680px 70px",
+        "url(img/brands.png) 0px 140px",
+        "url(img/brands.png) 170px 140px",
+        "url(img/brands.png) 340px 140px",
+        "url(img/brands.png) 510px 140px",
+        "url(img/brands.png) 680px 140px",
+    ]
+            .sort(() => Math.random() - 0.5);
+    let selectedSlide = Math.ceil(Math.random() * 5);
 doctype html
 html(lang="ru")
     head
@@ -154,6 +172,13 @@ html(lang="ru")
                         label(for="slide3")
                         label(for="slide4")
                         label(for="slide5")
+                section.brands
+                    .section-heading
+                        h2.section-title Бренды
+                    .cards.brands-card
+                        each brand in brands
+                            .card.brand-card
+                                .brand-image(style={ "background": brand })
                 section.items
                     .section-heading
                         h2.section-title Ассортимент
@@ -173,6 +198,12 @@ html(lang="ru")
                                         .price=item.price
                                         .category=item.category
         a(href="#")#scrolTop
+        .subscrib
+            p Подпишитесь на нашу E-mail рассылку
+            form(action="#" method="post")
+                input.formInput(type="text" placeholder="Ваше имя" required)
+                input.formInput(type="email" placeholder="Ваш e-mail" required)
+                input.formInput(type="submit" value="Подписаться")
         footer.footer
             .container
                 .footer-block
