@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="255px" height="255px" version="1.1"
+     shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+     fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 255 255" enable-background="new 0 0 100 100">
+ <g id="Layer_x0020_1">
+  <path fill="black" d="M117 73l0 94c0,5 3,8 8,8 5,0 9,-3 9,-8l0 -94c0,-4 -4,-8 -9,-8 -5,0 -8,4 -8,8z"/>
+     <path fill="black"
+           d="M74 209l0 -8 26 0c3,0 6,-2 8,-6l6 -20 22 0 6 20c2,4 5,6 9,6l25 0 0 8 -102 0zm76 -45c-1,-3 -4,-6 -8,-6l-34 0c-4,0 -7,3 -8,6l-7 20 -27 0c-5,0 -9,4 -9,8l0 26c0,5 4,8 9,8l119 0c4,0 8,-3 8,-8l0 -26c0,-4 -4,-8 -8,-8l-28 0 -7 -20z"/>
+     <path fill="black"
+           d="M193 218l0 -51 17 0 0 51 -17 0zm17 17c9,0 17,-8 17,-17l0 -51c0,-9 -8,-17 -17,-17l-17 0c-9,0 -17,8 -17,17l0 51c0,9 8,17 17,17l17 0z"/>
+     <path fill="black"
+           d="M40 218l0 -51 17 0 0 51 -17 0zm17 17c9,0 17,-8 17,-17l0 -51c0,-9 -8,-17 -17,-17l-17 0c-9,0 -17,8 -17,17l0 51c0,9 8,17 17,17l17 0z"/>
+     <path fill="black"
+           d="M108 65l0 -17 34 0 0 17 -34 0zm34 17c9,0 17,-8 17,-17l0 -17c0,-9 -8,-17 -17,-17l-34 0c-9,0 -17,8 -17,17l0 17c0,9 8,17 17,17l34 0z"/>
+     <path fill="black" d="M151 65l59 0c5,0 9,-4 9,-9 0,-4 -4,-8 -9,-8l-59 0c-5,0 -9,4 -9,8 0,5 4,9 9,9z"/>
+     <path fill="black" d="M40 65l60 0c4,0 8,-4 8,-9 0,-4 -4,-8 -8,-8l-60 0c-5,0 -8,4 -8,8 0,5 3,9 8,9z"/>
+ </g>
+</svg>

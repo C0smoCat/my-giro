@@ -101,7 +101,7 @@
             manufacturer: "Ninebot"
         }
     ]
-            .sort(() => Math.random() - 0.5);
+        .sort(() => Math.random() - 0.5);
     const brands = [
         "url(img/brands.png) 0px 0px",
         "url(img/brands.png) 170px 0px",
@@ -117,9 +117,9 @@
         "url(img/brands.png) 170px 140px",
         "url(img/brands.png) 340px 140px",
         "url(img/brands.png) 510px 140px",
-        "url(img/brands.png) 680px 140px",
+        "url(img/brands.png) 680px 140px"
     ]
-            .sort(() => Math.random() - 0.5);
+        .sort(() => Math.random() - 0.5);
     let selectedSlide = Math.ceil(Math.random() * 5);
 doctype html
 html(lang="ru")
@@ -178,14 +178,36 @@ html(lang="ru")
                     .cards.brands-card
                         each brand in brands
                             .card.brand-card
-                                .brand-image(style={ "background": brand })
+                                .brand-image(style={"background": brand})
                 section.items
+                    input#filter-gyro(type="checkbox" value="Гироскутер" checked hidden)
+                    input#filter-velo(type="checkbox" value="Электровелосипед" checked hidden)
+                    input#filter-sigv(type="checkbox" value="Сигвей" checked hidden)
+                    input#filter-mowe(type="checkbox" value="Моноколесо" checked hidden)
+
                     .section-heading
                         h2.section-title Ассортимент
-                        input.input.input-search(type="text" placeholder="Поиск")
+                        #items-filter
+                            label#filter-label-gyro.filter-label.tooltip(for="filter-gyro")
+                                span.tooltiptext Фильтр: гироскутеры
+                            label#filter-label-velo.filter-label.tooltip(for="filter-velo")
+                                span.tooltiptext Фильтр: электровелосипеды
+                            label#filter-label-sigv.filter-label.tooltip(for="filter-sigv")
+                                span.tooltiptext Фильтр: сигвеи
+                            label#filter-label-mowe.filter-label.tooltip(for="filter-mowe")
+                                span.tooltiptext Фильтр: моноколеса
+
                     .cards
                         each item in items
-                            .card(class = item.hot && "hot-card")
+                            -
+                                let filter;
+                                switch (item.category) {
+                                    case "Гироскутер": filter = "card-gyro"; break;
+                                    case "Электровелосипед": filter = "card-velo"; break;
+                                    case "Сигвей": filter = "card-sigv"; break;
+                                    case "Моноколесо": filter = "card-mowe"; break;
+                                }
+                            .card(class = item.hot && "hot-card" class=filter)
                                 img.card-image(src=item.img alt="image")
                                 .card-text
                                     .card-heading
@@ -197,13 +219,29 @@ html(lang="ru")
                                             =item.rating
                                         .price=item.price
                                         .category=item.category
+                        #items-empty
+                            p Упс, ничего нет!
+                            p Попробуйте поменять фильтр
         a(href="#")#scrolTop
+        input#support-btn(type="checkbox" name="support" hidden)
+        #support
+            label#support-label(for="support-btn")
+                img#support-icon(src="img/user.svg")
+            #support-content
+                div
+                    p#support-header Нужна помощь?
+                    p#support-info Оператор онлайн и готов помочь Вам
+                    textarea#support-input(placeholder="Ваш вопрос")
+                    p(style="line-height: 16px") Наши контакты: <br/>
+                        | Номер: <strong>+7 800 555 35 35</strong><br/>
+                        | E-mail: <strong>mygiro@giro.my</strong>
         .subscrib
-            p Подпишитесь на нашу E-mail рассылку
-            form(action="#" method="post")
-                input.formInput(type="text" placeholder="Ваше имя" required)
-                input.formInput(type="email" placeholder="Ваш e-mail" required)
-                input.formInput(type="submit" value="Подписаться")
+            .subscrib-content
+                p Подпишитесь на нашу E-mail рассылку
+                form(action="#" method="post")
+                    input.formInput(type="text" placeholder="Ваше имя" required)
+                    input.formInput(type="email" placeholder="Ваш e-mail" required)
+                    input.formInput(type="submit" value="Подписаться")
         footer.footer
             .container
                 .footer-block
