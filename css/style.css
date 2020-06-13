@@ -95,6 +95,88 @@ body {
 }
 
 
+#modal-back {
+    z-index: 130;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+#modal {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    outline: 0;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+#modal-close {
+    margin: 5px;
+    float: right;
+    background: #aaa;
+    padding: 5px;
+    font-family: Consolas, monospace;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal-content {
+    overflow: auto;
+    max-height: calc(100vh - 80px);
+}
+
+#modal-content h2 {
+    text-align: center;
+}
+
+#modal-content p {
+    text-align: justify;
+}
+
+#modal-content img {
+    width: 300px;
+    float: right;
+    margin-left: 30px;
+}
+
+#modal-content .float-left {
+    float: left;
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.modal-content {
+    display: none;
+    padding: 20px;
+}
+
+#modal-input-close:checked ~ #modal-back {
+    display: none;
+}
+
+#modal-input-elsa:checked ~ #modal-back #modal-content-elsa {
+    display: block;
+}
+
+#modal-input-sigv:checked ~ #modal-back #modal-content-sigv {
+    display: block;
+}
+
+#modal-input-gyro:checked ~ #modal-back #modal-content-gyro {
+    display: block;
+}
+
+
 .brand-card {
     min-width: 200px;
     max-width: 200px;
@@ -245,7 +327,7 @@ body {
 
 .card-image {
     width: 100%;
-    height: 250px;
+    max-height: 250px;
     object-fit: cover;
 }
 
@@ -321,6 +403,17 @@ body {
     border-radius: 50%;
     margin-left: 10px;
 }
+
+
+.about-items-card {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.about-items-card-image {
+    object-fit: fill;
+}
+
 
 #scrolTop {
     position: fixed;
@@ -553,7 +646,7 @@ body {
     }
 
     .card-title {
-        font-style: 18px;
+        font-size: 18px;
     }
 
     .promo {
@@ -568,6 +661,22 @@ body {
 
     .promo-text {
         margin-top: 0;
+    }
+
+    #modal-back {
+        padding: 0;
+    }
+
+    #modal {
+        box-shadow: none;
+        transform: none;
+        border-radius: 0;
+        position: static;
+        height: 100%;
+    }
+
+    #modal-content {
+        max-height: 100%;
     }
 }
 
